@@ -22,7 +22,7 @@ jobs:
 
       - name: Upload files to S3
         run: |
-           aws s3 sync NCE080BCT043/ s3://${{ secrets.S3_BUCKET }}/portfolio/ \
+           aws s3 sync portfolio/ s3://${{ secrets.S3_BUCKET }}/portfolio/ \
             --delete \
             --exclude ".git/*" \
             --exclude ".github/*"
