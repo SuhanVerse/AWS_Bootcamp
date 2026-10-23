@@ -3,10 +3,12 @@
 #hero {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: 24px;
   justify-content: center;
   align-items: flex-start;
-  background-image: url(../img/profile.JPG);
+  background-image: url(../img/profile.jpg);
   background-position: bottom right;
   background-size: contain;  
   background-repeat: no-repeat;
@@ -18,6 +20,7 @@
   font-weight: 700;
   margin-bottom: 20px;
   font-family: "Playfair Display", serif;
+  max-width: 100%;
 }
 
 #hero > p {
@@ -27,7 +30,7 @@
   margin-bottom: 30px;
 }
 
-#hero > button {
+#hero > .hero__contact {
   width: 300px;
   padding: 10px 15px;
   font-size: 16px;
@@ -40,14 +43,14 @@
   cursor: pointer;
 }
 
-#hero > button > span {
+#hero > .hero__contact > span {
   font-weight: normal;
   background-color: transparent;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
-#hero > button > i {
+#hero > .hero__contact > i {
   margin-left: 3px;
   font-size: 18px;
 }
@@ -62,8 +65,32 @@
   #hero > h1 {
     font-size: 22px;
   }
-  #hero > button {
+  #hero > .hero__contact {
     width: auto;
     padding: 8px 12px;
+  }
+}
+
+#hero h1 img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.hero__contact {
+  color: black;
+  background: #f0f0f0;
+}
+
+.hero__contact:focus-visible {
+  outline: 3px solid #7158dd;
+  outline-offset: 4px;
+}
+
+@media (max-width: 768px) {
+  #hero {
+    justify-content: flex-end;
+    background-size: auto 52%;
+    padding-bottom: 48px;
   }
 }
